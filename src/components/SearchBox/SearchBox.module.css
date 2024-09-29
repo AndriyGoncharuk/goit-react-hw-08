@@ -1,0 +1,24 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 400px;
+  margin: 10px 0;
+  border: 2px solid rgb(64, 65, 64);
+  border-radius: 3px;
+
+  padding: 12px;
+}
+
+.label {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 24px 0 24px 0;
+}
+
+.input {
+  width: 95%;
+  height: 30px;
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+}

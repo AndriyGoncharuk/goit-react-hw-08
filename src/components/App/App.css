@@ -1,0 +1,18 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  width: 640px;
+  margin: 0 auto;
+  padding-left: 350px;
+  display: flex;
+  gap: 40px;
+}
+
+.header {
+  padding-left: 20px;
+}

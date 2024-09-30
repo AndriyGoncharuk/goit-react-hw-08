@@ -36,8 +36,8 @@ const ContactsPage = () => {
           {!loading && !error && contacts.length !== 0 ? (
             <ContactList contacts={contacts} />
           ) : (
-            <div className="phonebookEmpty">
-              <p>The phonebook is empty</p>
+            <div>
+              <p className={styles.phonebookEmpty}>The phonebook is empty</p>
               <ImConfused />
             </div>
           )}

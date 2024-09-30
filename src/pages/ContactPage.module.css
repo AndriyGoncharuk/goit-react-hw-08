@@ -1,0 +1,8 @@
+.wrap {
+  display: flex;
+  gap: 24px;
+}
+
+.wrapContactList {
+  padding: 0;
+}

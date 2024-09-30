@@ -2,7 +2,7 @@ import styles from "./LoginForm.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
-import { login } from "../../redux/auth/operations";
+import { logIn } from "../../redux/auth/operations";
 import { selectAuthError } from "../../redux/auth/selectors";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const LoginForm = () => {
 
   const handleSubmit = (values, actions) => {
     dispatch(
-      login({
+      logIn({
         email: values.email,
         password: values.password,
       })

@@ -9,7 +9,7 @@ const getLinkStyle = ({ isActive }) =>
 
 const AuthNav = () => {
   return (
-    <div>
+    <div className={styles.box}>
       <NavLink to="/register" className={getLinkStyle}>
         Register
       </NavLink>

@@ -7,7 +7,9 @@ import { selectContacts } from "../redux/contacts/selectors";
 import { selectVisibleContacts } from "../redux/filters/selectors";
 import { useEffect } from "react";
 import { fetchContacts } from "../redux/contacts/operations";
-import { PiSmileyMeltingThin } from "react-icons/pi";
+import { ImConfused } from "react-icons/im";
+import { FaAddressBook } from "react-icons/fa";
+import styles from "./ContactPage.module.css";
 
 const ContactsPage = () => {
   const contacts = useSelector(selectVisibleContacts);
@@ -20,19 +22,27 @@ const ContactsPage = () => {
 
   return (
     <>
-      <h2 className="title">Phonebook</h2>
-      <ContactForm />
-      <SearchBox />
-      {loading && <Loader />}
-      {error && <p>Cant load contacts at the moment</p>}
-      {!loading && !error && contacts.length !== 0 ? (
-        <ContactList contacts={contacts} />
-      ) : (
-        <div className="phonebookEmpty">
-          <p>The phonebook is empty</p>
-          <PiSmileyMeltingThin />
+      <h2 className="title">
+        Phonebook <FaAddressBook />
+      </h2>
+      <div className={styles.wrap}>
+        <div>
+          <ContactForm />
+          <SearchBox />
         </div>
-      )}
+        <div className={styles.wrapContactList}>
+          {loading && <Loader />}
+          {error && <p>Cant load contacts at the moment</p>}
+          {!loading && !error && contacts.length !== 0 ? (
+            <ContactList contacts={contacts} />
+          ) : (
+            <div className="phonebookEmpty">
+              <p>The phonebook is empty</p>
+              <ImConfused />
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 };

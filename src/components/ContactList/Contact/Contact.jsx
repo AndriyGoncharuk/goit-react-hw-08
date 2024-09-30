@@ -11,8 +11,8 @@ import Modal from "../../Modal/Modal";
 import toast from "react-hot-toast";
 import { CiEdit } from "react-icons/ci";
 
-const Contact = ({ contact }) => {
-  const { id, name, number } = contact;
+const Contact = ({ data: { name, number, id } }) => {
+  // const { id, name, number } = contact;
   const [isOpen, setIsOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [editedName, setEditedName] = useState(name);
@@ -95,7 +95,11 @@ const Contact = ({ contact }) => {
           </>
         ) : (
           <>
-            <button type="button" className={styles.btn} onClick={handleOpen}>
+            <button
+              type="button"
+              className={styles.btn}
+              onClick={removeContact}
+            >
               Delete
             </button>
             <button

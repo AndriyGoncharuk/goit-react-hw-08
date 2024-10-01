@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.name {
+  display: flex;
+}
+
+.field {
+  height: 30px;
+}
+
+.btn {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #081749;
+  color: #f7f7fa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #213e9f;
+}

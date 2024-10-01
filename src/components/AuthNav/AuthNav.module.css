@@ -1,4 +1,5 @@
 .box {
   display: flex;
   gap: 50px;
+  justify-content: center;
 }

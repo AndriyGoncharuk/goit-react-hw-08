@@ -7,28 +7,17 @@ import {
 } from "../../../redux/contacts/operations";
 import { useState } from "react";
 import styles from "./Contact.module.css";
-import Modal from "../../Modal/Modal";
 import toast from "react-hot-toast";
 import { CiEdit } from "react-icons/ci";
 
 const Contact = ({ data: { name, number, id } }) => {
-  // const { id, name, number } = contact;
-  const [isOpen, setIsOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [editedName, setEditedName] = useState(name);
   const [editedNumber, setEditedNumber] = useState(number);
   const dispatch = useDispatch();
 
-  const handleOpen = () => setIsOpen(true);
-  const handleClose = () => setIsOpen(false);
-
   const removeContact = () => {
-    dispatch(deleteContacts(id))
-      .unwrap()
-      .then(() => {
-        toast.success("Contact deleted successesfully");
-        handleClose();
-      });
+    dispatch(deleteContacts(id));
   };
 
   const handleEditToggle = () => setIsEditing((prev) => !prev);
@@ -112,7 +101,6 @@ const Contact = ({ data: { name, number, id } }) => {
           </>
         )}
       </div>
-      {isOpen && <Modal onClose={handleClose} onDelete={removeContact} />}
     </div>
   );
 };

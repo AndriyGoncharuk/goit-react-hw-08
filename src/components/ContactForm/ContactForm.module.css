@@ -40,6 +40,10 @@
   margin: 0 auto;
 }
 
+.button:hover {
+  background-color: #213e9f;
+}
+
 .error {
   color: orangered;
   font-size: 12px;

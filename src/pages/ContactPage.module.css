@@ -2,11 +2,3 @@
   display: flex;
   gap: 24px;
 }
-
-.wrapContactList {
-  padding: 0;
-}
-
-.phonebookEmpty {
-  margin: 0;
-}

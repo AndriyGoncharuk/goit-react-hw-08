@@ -1,4 +1,19 @@
 .box {
   display: flex;
   gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: rgb(194, 158, 27);
+  height: 40px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #d8c215;
 }

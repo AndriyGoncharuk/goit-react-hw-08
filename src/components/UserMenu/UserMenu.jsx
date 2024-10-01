@@ -6,10 +6,10 @@ import { FaRegUser } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
 import styles from "./UserMenu.module.css";
 
-export default function userMenu() {
+export default function UserMenu() {
   const dispatch = useDispatch();
   const user = useSelector(selectAuthUser);
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const logout = () => {
     dispatch(logOut());
